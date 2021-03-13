@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+</style>
+</head>
+<body>
+
+<video autoplay muted loop id="myVideo">
+  <source src="best.mp4" type="video/mp4">
+</video>
+
+<div class="content">
+  <h1><a href="index.html"><img src="home.png" width=50 height=50></a>Bhole Nath</h1>
+  <p>
+  There is also an epic story, as to how Shiva got the name of Bholenath. The story is of a demon devotee of Shiva 
+  named Bhasmasura. He prayed to God Shiva, and pleaded with him to grant him a boon which would make him 
+  invincible. The boon was that anyone whose head he touched with his hand, should be reduced to Bhasma, 
+  Hindi word for ashes, and why he was so named, after that. Easy to please and thus called; Bholenath, 
+  granted him the boon, and risked himself to the greed for power on Devaloka, by the Asuras, as Bhasmasura 
+  after receiving the boon, ran after God Shiva, to reduce him to ashes, by placing his hand on his head. 
+  Shiva approached God Vishnu for help, who took the Avatar of Mohini, to vanquish the demon.
+  </p>
+  <button id="myBtn" onclick="myFunction()">Pause Video</button>
+</div>
+
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+
+</body>
+</html>
